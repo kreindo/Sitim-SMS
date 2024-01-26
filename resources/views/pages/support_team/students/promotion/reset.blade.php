@@ -22,7 +22,7 @@
             <table id="promotions-list" class="table datatable-button-html5-columns">
                 <thead>
                 <tr>
-                    <th>S/N</th>
+                    <th>No.</th>
                     <th>Photo</th>
                     <th>Name</th>
                     <th>From Class</th>

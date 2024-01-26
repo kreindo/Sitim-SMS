@@ -1,4 +1,5 @@
 <?php
+
 namespace Database\Seeders;
 
 use App\Models\State;
@@ -13,12 +14,44 @@ class StatesTableSeeder extends Seeder
         DB::table('states')->delete();
 
         $states = [
-            'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno', 'Cross River', 'Delta', 'Ebonyi', 'Edo', 'Ekiti', 'Enugu', 'FCT', 'Gombe', 'Imo', 'Jigawa','Kaduna', 'Kano', 'Katsina', 'Kebbi', 'Kogi', 'Kwara', 'Lagos', 'Nasarawa', 'Niger', 'Ogun', 'Ondo', 'Osun', 'Oyo', 'Plateau', 'Rivers', 'Sokoto', 'Taraba', 'Yobe', 'Zamfara',
+            "Aceh",
+            "Bali",
+            "Banten",
+            "Bengkulu",
+            "DKI Yogyakarta",
+            "DKI Jakarta",
+            "Gorontalo",
+            "Jambi",
+            "Jawa Barat",
+            "Jawa Tengah",
+            "Jawa Timur",
+            "Kalimantan Barat",
+            "Kalimantan Selatan",
+            "Kalimantan Tengah",
+            "Kalimantan Timur",
+            "Kalimantan Utara",
+            "Kepulauan Bangka Belitung",
+            "Kepulauan Riau",
+            "Lampung",
+            "Maluku",
+            "Maluku Utara",
+            "Nusa Tenggara Barat",
+            "Nusa Tenggara Timur",
+            "Papua",
+            "Papua Barat",
+            "Riau",
+            "Sulawesi Barat",
+            "Sulawesi Selatan",
+            "Sulawesi Tengah",
+            "Sulawesi Tenggara",
+            "Sulawesi Utara",
+            "Sumatera Barat",
+            "Sumatera Selatan",
+            "Sumatera Utara"
         ];
 
         foreach ($states as $state) {
             State::create(['name' => $state]);
         }
     }
-
 }

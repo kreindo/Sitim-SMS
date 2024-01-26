@@ -69,7 +69,7 @@
                     <div class="tab-pane fade" id="c{{ $d->id }}">                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>S/N</th>
+                                <th>No.</th>
                                 <th>Name</th>
                                 <th>Class</th>
                                 <th>Teacher</th>

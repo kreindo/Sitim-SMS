@@ -77,7 +77,7 @@
                     <div class="tab-pane fade" id="c{{ $c->id }}">                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>S/N</th>
+                                <th>No.</th>
                                 <th>Name</th>
                                 <th>Short Name</th>
                                 <th>Class</th>

@@ -26,7 +26,7 @@
                     <table class="table datatable-button-html5-columns">
                         <thead>
                         <tr>
-                            <th>S/N</th>
+                            <th>No.</th>
                             <th>Photo</th>
                             <th>Name</th>
                             <th>ADM_No</th>
@@ -78,7 +78,7 @@
                     <div class="tab-pane fade" id="s{{$se->id}}">                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>S/N</th>
+                                <th>No.</th>
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>ADM_No</th>

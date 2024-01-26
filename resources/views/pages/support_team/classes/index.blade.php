@@ -19,10 +19,10 @@
                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>S/N</th>
-                                <th>Name</th>
-                                <th>Class Type</th>
-                                <th>Action</th>
+                                <th>No.</th>
+                                <th>Nama</th>
+                                <th>Tipe Kelas</th>
+                                <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -75,14 +75,14 @@
                             <form class="ajax-store" method="post" action="{{ route('classes.store') }}">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nama Kelas <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text" class="form-control" placeholder="Name of Class">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Class Type</label>
+                                    <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Tipe Kelas</label>
                                     <div class="col-lg-9">
                                         <select required data-placeholder="Select Class Type" class="form-control select" name="class_type_id" id="class_type_id">
                                             @foreach($class_types as $ct)

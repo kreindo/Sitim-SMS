@@ -1,4 +1,5 @@
 <?php
+
 namespace Database\Seeders;
 
 use App\Models\Lga;
@@ -26,5 +27,4 @@ class LgasTableSeeder extends Seeder
             Lga::create(['state_id' => $state_id[$i], 'name' => $lgas[$i - 1]]);
         }
     }
-
 }
