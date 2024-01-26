@@ -4012,6 +4012,102 @@
             /**
      * 
      *
+     * @see \Illuminate\Encryption\Encrypter
+     */ 
+        class Crypt {
+                    /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */ 
+        public static function supported($key, $cipher)
+        {
+                        return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+                    /**
+         * Create a new encryption key for the given cipher.
+         *
+         * @param string $cipher
+         * @return string 
+         * @static 
+         */ 
+        public static function generateKey($cipher)
+        {
+                        return \Illuminate\Encryption\Encrypter::generateKey($cipher);
+        }
+                    /**
+         * Encrypt the given value.
+         *
+         * @param mixed $value
+         * @param bool $serialize
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encrypt($value, $serialize = true)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->encrypt($value, $serialize);
+        }
+                    /**
+         * Encrypt a string without serialization.
+         *
+         * @param string $value
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encryptString($value)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->encryptString($value);
+        }
+                    /**
+         * Decrypt the given value.
+         *
+         * @param string $payload
+         * @param bool $unserialize
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decrypt($payload, $unserialize = true)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->decrypt($payload, $unserialize);
+        }
+                    /**
+         * Decrypt the given string without unserialization.
+         *
+         * @param string $payload
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decryptString($payload)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->decryptString($payload);
+        }
+                    /**
+         * Get the encryption key.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getKey()
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->getKey();
+        }
+         
+    }
+            /**
+     * 
+     *
      * @see \Illuminate\Database\DatabaseManager
      * @see \Illuminate\Database\Connection
      */ 
@@ -14600,6 +14696,157 @@
      
 }
 
+    namespace Laravolt\Indonesia { 
+            /**
+     * 
+     *
+     */ 
+        class Facade {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function search($location)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->search($location);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function all()
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->all();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function allProvinces()
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->allProvinces();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function paginateProvinces($numRows = 15)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->paginateProvinces($numRows);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function allCities()
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->allCities();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function paginateCities($numRows = 15)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->paginateCities($numRows);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function allDistricts()
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->allDistricts();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function paginateDistricts($numRows = 15)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->paginateDistricts($numRows);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function allVillages()
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->allVillages();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function paginateVillages($numRows = 15)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->paginateVillages($numRows);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function findProvince($provinceId, $with = null)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->findProvince($provinceId, $with);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function findCity($cityId, $with = null)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->findCity($cityId, $with);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function findDistrict($districtId, $with = null)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->findDistrict($districtId, $with);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function findVillage($villageId, $with = null)
+        {
+                        /** @var \Laravolt\Indonesia\IndonesiaService $instance */
+                        return $instance->findVillage($villageId, $with);
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -15792,6 +16039,214 @@ namespace  {
             }
              
                 /**
+<<<<<<< Updated upstream
+=======
+             * Chunk the results of the query.
+             *
+             * @param int $count
+             * @param callable $callback
+             * @return bool 
+             * @static 
+             */ 
+            public static function chunk($count, $callback)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->chunk($count, $callback);
+            }
+             
+                /**
+             * Run a map over each item while chunking.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @return \Illuminate\Support\Collection 
+             * @static 
+             */ 
+            public static function chunkMap($callback, $count = 1000)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->chunkMap($callback, $count);
+            }
+             
+                /**
+             * Execute a callback over each item while chunking.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @return bool 
+             * @throws \RuntimeException
+             * @static 
+             */ 
+            public static function each($callback, $count = 1000)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->each($callback, $count);
+            }
+             
+                /**
+             * Chunk the results of a query by comparing IDs.
+             *
+             * @param int $count
+             * @param callable $callback
+             * @param string|null $column
+             * @param string|null $alias
+             * @return bool 
+             * @static 
+             */ 
+            public static function chunkById($count, $callback, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->chunkById($count, $callback, $column, $alias);
+            }
+             
+                /**
+             * Execute a callback over each item while chunking by ID.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @param string|null $column
+             * @param string|null $alias
+             * @return bool 
+             * @static 
+             */ 
+            public static function eachById($callback, $count = 1000, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->eachById($callback, $count, $column, $alias);
+            }
+             
+                /**
+             * Query lazily, by chunks of the given size.
+             *
+             * @param int $chunkSize
+             * @return \Illuminate\Support\LazyCollection 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function lazy($chunkSize = 1000)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazy($chunkSize);
+            }
+             
+                /**
+             * Query lazily, by chunking the results of a query by comparing IDs.
+             *
+             * @param int $chunkSize
+             * @param string|null $column
+             * @param string|null $alias
+             * @return \Illuminate\Support\LazyCollection 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function lazyById($chunkSize = 1000, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazyById($chunkSize, $column, $alias);
+            }
+             
+                /**
+             * Query lazily, by chunking the results of a query by comparing IDs in descending order.
+             *
+             * @param int $chunkSize
+             * @param string|null $column
+             * @param string|null $alias
+             * @return \Illuminate\Support\LazyCollection 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function lazyByIdDesc($chunkSize = 1000, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazyByIdDesc($chunkSize, $column, $alias);
+            }
+             
+                /**
+             * Execute the query and get the first result.
+             *
+             * @param array|string $columns
+             * @return \Illuminate\Database\Eloquent\Model|object|static|null 
+             * @static 
+             */ 
+            public static function first($columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->first($columns);
+            }
+             
+                /**
+             * Execute the query and get the first result if it's the sole matching record.
+             *
+             * @param array|string $columns
+             * @return \Illuminate\Database\Eloquent\Model|object|static|null 
+             * @throws \Illuminate\Database\RecordsNotFoundException
+             * @throws \Illuminate\Database\MultipleRecordsFoundException
+             * @static 
+             */ 
+            public static function baseSole($columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->baseSole($columns);
+            }
+             
+                /**
+             * Pass the query to a given callback.
+             *
+             * @param callable $callback
+             * @return $this|mixed 
+             * @static 
+             */ 
+            public static function tap($callback)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->tap($callback);
+            }
+             
+                /**
+             * Apply the callback if the given "value" is truthy.
+             *
+             * @param mixed $value
+             * @param callable $callback
+             * @param callable|null $default
+             * @return $this|mixed 
+             * @static 
+             */ 
+            public static function when($value, $callback, $default = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->when($value, $callback, $default);
+            }
+             
+                /**
+             * Apply the callback if the given "value" is falsy.
+             *
+             * @param mixed $value
+             * @param callable $callback
+             * @param callable|null $default
+             * @return $this|mixed 
+             * @static 
+             */ 
+            public static function unless($value, $callback, $default = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->unless($value, $callback, $default);
+            }
+             
+                /**
+             * 
+             *
+             * @see \Laravolt\Indonesia\ServiceProvider::registerMacro()
+             * @param mixed $attributes
+             * @param string $searchTerm
+             * @static 
+             */ 
+            public static function whereLike($attributes, $searchTerm)
+            {
+                                return \Illuminate\Database\Eloquent\Builder::whereLike($attributes, $searchTerm);
+            }
+             
+                /**
+>>>>>>> Stashed changes
              * Set the columns to be selected.
              *
              * @param array|mixed $columns
@@ -17732,6 +18187,7 @@ namespace  {
             class Mk extends \App\Helpers\Mk {}
             class Pay extends \App\Helpers\Pay {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
+            class Indonesia extends \Laravolt\Indonesia\Facade {}
      
 }
 
